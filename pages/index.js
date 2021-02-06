@@ -8,7 +8,6 @@ import getSortedPostsData from "../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
   return {
     props: {
       allPostsData,
@@ -17,10 +16,19 @@ export async function getStaticProps() {
 }
 
 export default function HomePage({allPostsData}) {
+  // console.log(allPostsData[0]["content"]);
+  allPostsData.map(({id, meta, content}) => console.log(content));
+
   return (
     <div>
-      <Header />
-      <p>Hello Next.js</p>
+      <div>
+        <Header />
+        <p>Hello Next.js</p>
+      </div>
+
+      <div>
+        <section>{allPostsData.map(({id, meta, content}) => content)}</section>
+      </div>
     </div>
   );
 }

@@ -15,9 +15,10 @@
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
     "remark-gfm": "^1.0.0",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "superjson": "^1.6.1"
   },
-  "browser":{
+  "browser": {
     "fs": false
   }
 }
