@@ -4,16 +4,23 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Markdown from "react-markdown";
 import gfm from "remark-gfm";
-import home from "../docs/home.md";
+import getSortedPostsData from "../lib/posts";
 
-// sudo npm install --save style-loader css-loader
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  console.log(allPostsData);
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
 
-export default function HomePage() {
+export default function HomePage({allPostsData}) {
   return (
     <div>
       <Header />
       <p>Hello Next.js</p>
-      <Markdown children={"../docs/home.md"} />
     </div>
   );
 }

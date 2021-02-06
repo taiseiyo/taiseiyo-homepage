@@ -1,0 +1,8 @@
+Module not found: Can't resolve 'fs'
+→ package.json に以下を追加
+
+"browser": {
+  "fs": false
+}
+
+sudo npm install --save style-loader css-loader

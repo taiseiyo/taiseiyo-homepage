@@ -9,11 +9,15 @@
   },
   "dependencies": {
     "css-loader": "^5.0.1",
+    "gray-matter": "^4.0.2",
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
     "remark-gfm": "^1.0.0",
     "style-loader": "^2.0.0"
+  },
+  "browser":{
+    "fs": false
   }
 }
